@@ -77,21 +77,21 @@ input {
 
 }
 
-#study {
+.study {
   background-image: url(./assets/study.svg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 40px 40px;
 }
 
-#meditate {
+.meditate {
   background-image: url(./assets/meditate.svg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 40px 40px;
 }
 
-#exercise {
+.exercise {
   background-image: url(./assets/exercise.svg);
   background-repeat: no-repeat;
   background-position: top;
@@ -99,9 +99,13 @@ input {
 }
 
 input {
+  outline: none;
+  color: #FFF;
+  font-size: 14px;
   background: transparent;
   border: none;
   border-bottom: 1px solid #CBC9CF
+
 }
 
 .timer-input {
@@ -126,12 +130,20 @@ input {
 .change-purple {
   border-color: #C278FD;
   outline: none;
+<<<<<<< HEAD
+=======
+  background-image: url(./assets/meditate-active.svg);
+>>>>>>> 3fa87e22ddd150fe48b71966b92fc1c9bd336dbf
   color: #C278FD;
 }
 
 .change-orange {
   border-color: #FD8078;
   outline: none;
+<<<<<<< HEAD
+=======
+  background-image: url(./assets/exercise-active.svg);
+>>>>>>> 3fa87e22ddd150fe48b71966b92fc1c9bd336dbf
   color: #FD8078;
 }
 
@@ -147,3 +159,45 @@ input {
   margin-top: inherit;
   font-size: 14px;
 }
+<<<<<<< HEAD
+=======
+
+.timerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hiddenTimer {
+  display: none;
+}
+
+.activityStart {
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  background-color: #46424D;
+}
+
+.hideForm {
+  display: none;
+}
+
+.green-border {
+  border: 2px solid #B3FD78;
+  outline: none;
+}
+
+.purple-border {
+  border: 2px solid #C278FD;
+  outline: none;
+}
+
+.orange-border {
+  border: 2px solid #FD8078;
+  outline: none;
+}
+>>>>>>> 3fa87e22ddd150fe48b71966b92fc1c9bd336dbf
