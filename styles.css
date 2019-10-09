@@ -112,7 +112,8 @@ input {
 }
 
 .change-green {
-  border-color: green;
+  border-color: #B3FD78;
   outline: none;
+  color: #B3FD78;
   background-image: url(./assets/study-active.svg);
 }
