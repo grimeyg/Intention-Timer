@@ -30,7 +30,12 @@ main {
 h2 {
   display: block;
   margin: 20px 20px 0px 20px;
-  width: 100%;
+  color: #CBC9CF;
+}
+
+h3 {
+  color: #FFF;
+  margin-top: 10%;
 }
 
 form {
@@ -54,23 +59,49 @@ input {
 
 .category {
   width:20%;
-  border: 2px solid #ffffff;
+  border: 2px solid #FFF;
   border-radius: 2px;
   background-color: #46424D;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  font-size: 16px;
   align-items: center;
-}
-
-.category img {
-  width: 50px;
-  height: 50px;
+  color: #CBC9CF;
+  height: 80px;
 }
 
 #button-layout {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+}
+
+#study {
+  background-image: url(./assets/study.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px 40px;
+}
+
+#meditate {
+  background-image: url(./assets/meditate.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px 40px;
+}
+
+#exercise {
+  background-image: url(./assets/exercise.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px 40px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #CBC9CF
 }
 
 .timer-input {
@@ -85,10 +116,6 @@ input {
   justify-content: space-between;
 }
 
-.change-green {
-  border-color: green;
-}
-
 .change-purple {
   border-color: purple;
 }
@@ -101,4 +128,17 @@ input {
   width: 300px;
   margin-top: 30px
 
+.submit-button {
+  align-self: flex-end;
+  width: 25%;
+  padding: 1%;
+  border-radius: 2px;
+  margin-top: inherit;
+  font-size: 14px;
+}
+
+.change-green {
+  border-color: green;
+  outline: none;
+  background-image: url(./assets/study-active.svg);
 }
