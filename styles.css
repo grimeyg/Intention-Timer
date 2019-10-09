@@ -4,23 +4,27 @@ body {
   padding: 0px;
   margin: 0px auto;
   font-family: Montserrat;
+  display: flex;
+  flex-wrap:wrap;
 }
 
 header {
-  display: flex;
-  justify-content:center;
-  align-content: center;
   background-color: #46424D;
   margin:0px auto;
+  width:100%;
 }
 
 h1 {
   font-weight: 300;
+  display: flex;
+  justify-content: center;
 }
 
 main {
   display:flex;
+  flex-wrap: wrap;
   justify-content: center;
+  width:67%;
 }
 
 h2 {
@@ -41,6 +45,16 @@ form {
   margin:20px;
   width:93%;
   flex-direction:column;
+}
+
+aside {
+  width:33%;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
 }
 
 .category {
@@ -101,6 +115,18 @@ input {
   display: flex;
   justify-content: space-between;
 }
+
+.change-purple {
+  border-color: purple;
+}
+
+.change-orange {
+  border-color: orange;
+}
+
+#submit-form {
+  width: 300px;
+  margin-top: 30px
 
 .submit-button {
   align-self: flex-end;
