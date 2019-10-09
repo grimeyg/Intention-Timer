@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-var studyButton = document.querySelector("#study");
-var medButton = document.querySelector("#meditate");
-var exeButton = document.querySelector("#exercise");
-// var submitForm = document.querySelector("#submit-form");
-var time
-=======
 var studyButton = document.querySelector(".study");
 var medButton = document.querySelector(".meditate");
 var exeButton = document.querySelector(".exercise");
@@ -12,7 +5,6 @@ var submitButton = document.querySelector(".submit-button");
 var inputForm = document.querySelector(".inputForm")
 var timerForm = document.querySelector(".timerForm")
 var timerStart = document.querySelector(".activityStart")
->>>>>>> 3fa87e22ddd150fe48b71966b92fc1c9bd336dbf
 
 
 studyButton.addEventListener("click", changeStudy);
