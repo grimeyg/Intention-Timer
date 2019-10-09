@@ -1,3 +1,9 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #2B2733;
   color: #ffffff;
@@ -23,8 +29,8 @@ h1 {
 main {
   display:flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width:67%;
+  justify-content: flex-start;
+  width:66%;
 }
 
 h2 {
@@ -37,7 +43,10 @@ h3 {
   color: #FFF;
   margin-top: 10%;
 }
-
+/* #asideCenter{
+  display: flex;
+  justify-content: center;
+} */
 form {
   display:flex;
   background-color: #46424D;
@@ -49,12 +58,35 @@ form {
 
 aside {
   width:33%;
+  border-left: 3px solid #46424D;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.noLogMessage {
+  text-align: center;
+  font-size: 14px;
+  margin: 20px 20px 0px 20px;
 }
 
 input {
   background: transparent;
   border: none;
   border-bottom: 1px solid #000000;
+}
+
+p img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+.error-description {
+  color: #EFB7EC;
+}
+
+.hide-error {
+  display: none;
 }
 
 .category {
@@ -141,10 +173,6 @@ input {
   color: #FD8078;
 }
 
-/* #submit-form {
-  width: 300px;
-  margin-top: 30px */
-
 .submit-button {
   align-self: flex-end;
   width: 25%;
@@ -154,7 +182,7 @@ input {
   font-size: 14px;
 }
 
-.timerForm {
+.timer-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +193,7 @@ input {
   display: none;
 }
 
-.activityStart {
+.activity-start {
   border: 2px solid #FFF;
   border-radius: 50%;
   width: 200px;

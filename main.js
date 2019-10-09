@@ -2,10 +2,11 @@ var studyButton = document.querySelector(".study");
 var medButton = document.querySelector(".meditate");
 var exeButton = document.querySelector(".exercise");
 var submitButton = document.querySelector(".submit-button");
-var inputForm = document.querySelector(".inputForm")
-var timerForm = document.querySelector(".timerForm")
-var timerStart = document.querySelector(".activityStart")
-
+var inputForm = document.querySelector(".input-form")
+var timerForm = document.querySelector(".timer-form")
+var timerStart = document.querySelector(".activity-start")
+var accomplishInput = document.querySelector(".accomplish")
+var errorDescription = document.querySelector(".error-description")
 
 studyButton.addEventListener("click", changeStudy);
 medButton.addEventListener("click", changeMeditate);
@@ -15,17 +16,14 @@ submitButton.addEventListener("click", changeForm);
 
 
 function changeForm() {
-  event.preventDefault(submitButton);
-  inputForm.classList.add("hideForm");
-  timerForm.classList.remove("hiddenTimer");
- //  if(studyButton.classList.contains("change-green")){
- //   timerStart.classList.add("green-border");
- // }else if (medButton.classList.contains("change-purple"){
- //    timerStart.classList.border = "2px solid purple";
- //  }else if (exeButton.classList.contains("change-orange"){
- //    timerStart.classList.border = "2px solid orange";
- //  }else{null;
- //  }
+  if(accomplishInput.value === "") {
+    event.preventDefault(submitButton);
+    errorDescription.classList.remove("hide-error");
+  }else {
+    event.preventDefault(submitButton);
+    inputForm.classList.add("hideForm");
+    timerForm.classList.remove("hiddenTimer");
+  }
 }
 
 function changeStudy(){

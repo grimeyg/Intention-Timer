@@ -12,7 +12,7 @@
     </header>
     <main>
       <h2>New Activity</h2>
-      <form class="inputForm">
+      <form class="input-form">
         <h3>Select a category:</h3>
         <div id="button-layout">
           <button class="category study">Study</button>
@@ -20,7 +20,8 @@
           <button class="category exercise">Exercise</button>
         </div>
         <h3>What would you like to accomplish during this time?</h3>
-        <input/>
+        <input class="accomplish">
+        <p class="error-description hide-error"><img src="./assets/warning.svg">A description is required. </p>
         <section id="timer-layout">
           <div class="timer-input">
             <h3>Minutes</h3>
@@ -33,17 +34,17 @@
         </section>
         <button id="submit-form" class="submit-button">START ACTIVITY</button>
       </form>
-      <form class="timerForm hiddenTimer">
+      <form class="timer-form hiddenTimer">
         <h3>Deep Breathing</h3>
         <p>05:00</p>
-        <button class="activityStart">START</button>
+        <button class="activity-start">START</button>
       </form>
     </main>
 
     <aside>
       <h2>Past Activities</h2>
-      <section>
-        <p>You haven't logged any activities yet. Complete the form to the left to get started!
+      <section id="asideCenter">
+        <p class="noLogMessage">You haven't logged any activities yet. <br> Complete the form to the left to get started!</p>
       </section>
     </aside>
   </body>
