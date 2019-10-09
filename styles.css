@@ -77,21 +77,21 @@ input {
 
 }
 
-#study {
+.study {
   background-image: url(./assets/study.svg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 40px 40px;
 }
 
-#meditate {
+.meditate {
   background-image: url(./assets/meditate.svg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 40px 40px;
 }
 
-#exercise {
+.exercise {
   background-image: url(./assets/exercise.svg);
   background-repeat: no-repeat;
   background-position: top;
@@ -99,9 +99,13 @@ input {
 }
 
 input {
+  outline: none;
+  color: #FFF;
+  font-size: 14px;
   background: transparent;
   border: none;
   border-bottom: 1px solid #CBC9CF
+
 }
 
 .timer-input {
@@ -116,17 +120,30 @@ input {
   justify-content: space-between;
 }
 
+.change-green {
+  border-color: #B3FD78;
+  outline: none;
+  background-image: url(./assets/study-active.svg);
+  color: #B3FD78;
+}
+
 .change-purple {
-  border-color: purple;
+  border-color: #C278FD;
+  outline: none;
+  background-image: url(./assets/meditate-active.svg);
+  color: #C278FD;
 }
 
 .change-orange {
-  border-color: orange;
+  border-color: #FD8078;
+  outline: none;
+  background-image: url(./assets/exercise-active.svg);
+  color: #FD8078;
 }
 
-#submit-form {
+/* #submit-form {
   width: 300px;
-  margin-top: 30px
+  margin-top: 30px */
 
 .submit-button {
   align-self: flex-end;
@@ -137,9 +154,41 @@ input {
   font-size: 14px;
 }
 
-.change-green {
-  border-color: #B3FD78;
+.timerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hiddenTimer {
+  display: none;
+}
+
+.activityStart {
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  background-color: #46424D;
+}
+
+.hideForm {
+  display: none;
+}
+
+.green-border {
+  border: 2px solid #B3FD78;
   outline: none;
-  color: #B3FD78;
-  background-image: url(./assets/study-active.svg);
+}
+
+.purple-border {
+  border: 2px solid #C278FD;
+  outline: none;
+}
+
+.orange-border {
+  border: 2px solid #FD8078;
+  outline: none;
 }
