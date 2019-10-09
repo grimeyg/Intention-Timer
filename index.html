@@ -12,32 +12,39 @@
     </header>
     <main>
       <h2>New Activity</h2>
-      <form>
+      <form class="inputForm">
         <h3>Select a category:</h3>
         <div id="button-layout">
-          <button id="study" class="category">Study</button>
-          <button id="meditate" class="category">Meditate</button>
-          <button id="exercise" class="category">Exercise</button>
+          <button class="category study">Study</button>
+          <button class="category meditate">Meditate</button>
+          <button class="category exercise">Exercise</button>
         </div>
         <h3>What would you like to accomplish during this time?</h3>
         <input/>
         <section id="timer-layout">
           <div class="timer-input">
             <h3>Minutes</h3>
-            <input/>
+            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
           <div class="timer-input">
             <h3>Seconds</H3>
-            <input/>
+            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
         </section>
         <button id="submit-form" class="submit-button">START ACTIVITY</button>
+      </form>
+      <form class="timerForm hiddenTimer">
+        <h3>Deep Breathing</h3>
+        <p>05:00</p>
+        <button class="activityStart">START</button>
       </form>
     </main>
 
     <aside>
       <h2>Past Activities</h2>
-      <p>You haven't logged any activities yet. Complete the form to the left to get started!
+      <section>
+        <p>You haven't logged any activities yet. Complete the form to the left to get started!
+      </section>
     </aside>
   </body>
 </html>
