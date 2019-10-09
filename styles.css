@@ -116,17 +116,28 @@ input {
   justify-content: space-between;
 }
 
+.change-green {
+  border-color: #B3FD78;
+  outline: none;
+  background-image: url(./assets/study-active.svg);
+  color: #B3FD78;
+}
+
 .change-purple {
-  border-color: purple;
+  border-color: #C278FD;
+  outline: none;
+  color: #C278FD;
 }
 
 .change-orange {
-  border-color: orange;
+  border-color: #FD8078;
+  outline: none;
+  color: #FD8078;
 }
 
-#submit-form {
+/* #submit-form {
   width: 300px;
-  margin-top: 30px
+  margin-top: 30px */
 
 .submit-button {
   align-self: flex-end;
@@ -135,10 +146,4 @@ input {
   border-radius: 2px;
   margin-top: inherit;
   font-size: 14px;
-}
-
-.change-green {
-  border-color: green;
-  outline: none;
-  background-image: url(./assets/study-active.svg);
 }

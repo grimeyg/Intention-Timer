@@ -1,7 +1,7 @@
 var studyButton = document.querySelector("#study");
 var medButton = document.querySelector("#meditate");
 var exeButton = document.querySelector("#exercise");
-var submitForm = document.querySelector("#submit-form");
+// var submitForm = document.querySelector("#submit-form");
 var time
 
 
