@@ -10,6 +10,11 @@ var timerStart = document.querySelector(".activity-start")
 var accomplishInput = document.querySelector(".accomplish")
 var errorDescription = document.querySelector(".error-description")
 var toAccomplish = document.querySelector(".to-accomplish")
+// timer
+var secInput = document.getElementById("second-input");
+var min = document.getElementById("minute-input").value;
+var sec = document.getElementById("sec");
+// timer
 
 studyButton.addEventListener("click", changeStudy);
 medButton.addEventListener("click", changeMeditate);
@@ -27,8 +32,10 @@ function changeForm() {
     newActivity.classList.add("hide-form");
     currentActivity.classList.remove("hidden-timer");
     toAccomplish.innerText = accomplishInput.value;
+    sec.innerHTML = secInput.value;
   }
 }
+
 
 function changeStudy(){
   event.preventDefault(studyButton);

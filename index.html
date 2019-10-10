@@ -25,19 +25,22 @@
         <p class="error-description hide-error"><img src="./assets/warning.svg">A description is required. </p>
         <section id="timer-layout">
           <div class="timer-input">
-            <h3>Minutes</h3>
+            <h3 id="minute-input">Minutes</h3>
             <input value=0 type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
           <div class="timer-input">
-            <h3>Seconds</H3>
-            <input value=0 type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            <h3 >Seconds</H3>
+            <input id="second-input" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
         </section>
         <button id="submit-form" class="submit-button">START ACTIVITY</button>
       </form>
       <form class="timer-form hidden-timer">
         <h3 class="to-accomplish"></h3>
-        <p>05:00</p>
+        <p id="activity-timer">
+          <span id="min">00:</span>
+          <span id="sec">00</span>
+        </p>
         <button class="activity-start">START</button>
       </form>
     </main>
