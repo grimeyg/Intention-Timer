@@ -11,7 +11,8 @@
       <h1>INTENTION TIMER</h1>
     </header>
     <main>
-      <h2>New Activity</h2>
+      <h2 class="new-activity">New Activity</h2>
+      <h2 class=" current-activity hidden-timer">Current Activity</h2>
       <form class="input-form">
         <h3>Select a category:</h3>
         <div id="button-layout">
@@ -25,17 +26,17 @@
         <section id="timer-layout">
           <div class="timer-input">
             <h3>Minutes</h3>
-            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            <input value=0 type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
           <div class="timer-input">
             <h3>Seconds</H3>
-            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            <input value=0 type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
         </section>
         <button id="submit-form" class="submit-button">START ACTIVITY</button>
       </form>
-      <form class="timer-form hiddenTimer">
-        <h3>Deep Breathing</h3>
+      <form class="timer-form hidden-timer">
+        <h3 class="to-accomplish"></h3>
         <p>05:00</p>
         <button class="activity-start">START</button>
       </form>

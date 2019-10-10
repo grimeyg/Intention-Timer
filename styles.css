@@ -43,10 +43,7 @@ h3 {
   color: #FFF;
   margin-top: 10%;
 }
-/* #asideCenter{
-  display: flex;
-  justify-content: center;
-} */
+
 form {
   display:flex;
   background-color: #46424D;
@@ -112,21 +109,21 @@ p img {
 .study {
   background-image: url(./assets/study.svg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 50% 30%;
   background-size: 40px 40px;
 }
 
 .meditate {
   background-image: url(./assets/meditate.svg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 50% 30%;
   background-size: 40px 40px;
 }
 
 .exercise {
   background-image: url(./assets/exercise.svg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 50% 30%;
   background-size: 40px 40px;
 }
 
@@ -189,7 +186,7 @@ input {
   align-items: center;
 }
 
-.hiddenTimer {
+.hidden-timer {
   display: none;
 }
 
@@ -202,7 +199,7 @@ input {
   background-color: #46424D;
 }
 
-.hideForm {
+.hide-form {
   display: none;
 }
 
