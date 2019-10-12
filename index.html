@@ -30,18 +30,18 @@
           </div>
           <div class="timer-input">
             <h3 >Seconds</H3>
-            <input id="second-input" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            <input id="second-input" type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
         </section>
-        <button id="submit-form" class="submit-button">START ACTIVITY</button>
+        <button id="submit-form" class="submit-button" type="button">START ACTIVITY</button>
       </form>
       <form class="timer-form hidden-timer">
         <h3 class="to-accomplish"></h3>
-        <p id="activity-timer">
-          <span id="min">00:</span>
-          <span id="sec">00</span>
-        </p>
-        <button class="activity-start">START</button>
+        <div id="activity-timer">
+          <div id="min"></div>
+          <div id="sec"></div>
+        </div>
+        <button class="activity-start" type="button">START</button>
       </form>
     </main>
 

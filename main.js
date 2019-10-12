@@ -2,24 +2,39 @@ var studyButton = document.querySelector(".study");
 var medButton = document.querySelector(".meditate");
 var exeButton = document.querySelector(".exercise");
 var submitButton = document.querySelector(".submit-button");
-var newActivity = document.querySelector(".new-activity")
-var currentActivity = document.querySelector(".current-activity")
-var inputForm = document.querySelector(".input-form")
-var timerForm = document.querySelector(".timer-form")
-var timerStart = document.querySelector(".activity-start")
-var accomplishInput = document.querySelector(".accomplish")
-var errorDescription = document.querySelector(".error-description")
-var toAccomplish = document.querySelector(".to-accomplish")
+var newActivity = document.querySelector(".new-activity");
+var currentActivity = document.querySelector(".current-activity");
+var inputForm = document.querySelector(".input-form");
+var timerForm = document.querySelector(".timer-form");
+var timerStart = document.querySelector(".activity-start");
+var accomplishInput = document.querySelector(".accomplish");
+var errorDescription = document.querySelector(".error-description");
+var toAccomplish = document.querySelector(".to-accomplish");
 // timer
 var secInput = document.getElementById("second-input");
-var min = document.getElementById("minute-input").value;
-var sec = document.getElementById("sec");
+var min = document.getElementById("minute-input");
 // timer
+var funcSec = document.getElementById("sec");
+
 
 studyButton.addEventListener("click", changeStudy);
 medButton.addEventListener("click", changeMeditate);
 exeButton.addEventListener("click", changeExercise);
 submitButton.addEventListener("click", changeForm);
+timerStart.addEventListener("click", startCountdown);
+
+
+function startCountdown(){
+var seconds = secInput.value
+setInterval( countOne, 1000);
+// document.getElementById("timer").innerHTML= count + " secs";
+function countOne(){
+ seconds = seconds - 1;
+ funcSec.innerHTML = seconds;
+}
+}
+
+
 
 function changeForm() {
   if(accomplishInput.value === "") {
@@ -32,9 +47,17 @@ function changeForm() {
     newActivity.classList.add("hide-form");
     currentActivity.classList.remove("hidden-timer");
     toAccomplish.innerText = accomplishInput.value;
-    sec.innerHTML = secInput.value;
+    funcSec.innerHTML = secInput.value;
+    console.log(funcSec.innerHTML);
   }
 }
+
+// function getTime(){
+//   funcSec.innerHTML = secInput.value;
+// }
+
+
+
 
 
 function changeStudy(){
@@ -54,7 +77,7 @@ exeButton.classList.remove("change-orange");
 function changeMeditate(){
   event.preventDefault(medButton);
   if(medButton.classList.contains("change-purple")){
-    medButton.classList.remove("change-purple")
+    medButton.classList.remove("change-purple");
     timerStart.classList.remove("purple-border");
 } else{
     medButton.classList.add("change-purple");
@@ -67,7 +90,7 @@ exeButton.classList.remove("change-orange");
 function changeExercise(){
   event.preventDefault(exeButton);
   if(exeButton.classList.contains("change-orange")){
-    exeButton.classList.remove("change-orange")
+    exeButton.classList.remove("change-orange");
     timerStart.classList.remove("orange-border");
 } else{
     exeButton.classList.add("change-orange");
