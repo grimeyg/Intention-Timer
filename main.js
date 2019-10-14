@@ -12,9 +12,11 @@ var errorDescription = document.querySelector(".error-description");
 var toAccomplish = document.querySelector(".to-accomplish");
 // timer
 var secInput = document.getElementById("second-input");
-var min = document.getElementById("minute-input");
+var minInput = document.getElementById("minute-input");
 // timer
 var funcSec = document.getElementById("sec");
+// min edit
+var funcMin = document.getElementById("min");
 
 
 studyButton.addEventListener("click", function (){
@@ -57,10 +59,33 @@ function startCountdown(){
 var seconds = secInput.value;
 setInterval( countOne, 1000);
 // document.getElementById("timer").innerHTML= count + " secs";
-function countOne(){
- seconds = seconds - 1;
- funcSec.innerHTML = seconds;
-}
+// min edit that doesnt work
+var minutes = minInput.value;
+// setInterval( (countOne, 1000)*60);
+
+
+
+  function countOne(){
+    funcSec.innerHTML = seconds;
+    seconds = seconds - 1;
+    funcMin.innerHTML = minutes;
+    if(seconds === -1){
+      minutes --;
+      seconds = 59;
+      console.log("hi");
+    }
+    if(seconds < 10){
+      seconds = "0" + seconds;
+    }
+    if(minutes === -1){
+      minutes = "00"
+      seconds = "00"
+      return timerStart.innerHTML = "COMPLETE!"
+      //run alert
+    }
+
+    // funcMin.innerHTML = minutes;
+  }
 }
 
 
@@ -78,7 +103,11 @@ function changeForm() {
     toAccomplish.innerText = accomplishInput.value;
     funcSec.innerHTML = secInput.value;
     console.log(funcSec.innerHTML);
-  }
+    funcMin.innerHTML = minInput.value;
+    if(secInput.value < 10){
+      funcSec.innerHTML = "0" + funcSec.innerHTML;
+    }
+}
 }
 
 
