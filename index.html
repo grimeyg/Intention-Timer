@@ -25,12 +25,12 @@
         <p class="error-description hide-error"><img src="./assets/warning.svg">A description is required. </p>
         <section id="timer-layout">
           <div class="timer-input">
-            <h3 id="minute-input">Minutes</h3>
-            <input value=0 type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            <h3>Minutes</h3>
+            <input id="minute-input" placeholder=0 type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
           <div class="timer-input">
             <h3 >Seconds</H3>
-            <input id="second-input" type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            <input id="second-input" placeholder=0 type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
         </section>
         <button id="submit-form" class="submit-button" type="button">START ACTIVITY</button>
@@ -38,7 +38,7 @@
       <form class="timer-form hidden-timer">
         <h3 class="to-accomplish"></h3>
         <div id="activity-timer">
-          <div id="min"></div>
+          <div id="min">00</div>:
           <div id="sec"></div>
         </div>
         <button class="activity-start" type="button">START</button>
@@ -47,8 +47,8 @@
 
     <aside>
       <h2>Past Activities</h2>
-      <section id="asideCenter">
-        <p class="noLogMessage">You haven't logged any activities yet. <br> Complete the form to the left to get started!</p>
+      <section id="aside-center">
+        <p class="no-log-message">You haven't logged any activities yet. <br> Complete the form to the left to get started!</p>
       </section>
     </aside>
   </body>
