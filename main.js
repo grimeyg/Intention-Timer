@@ -2,6 +2,7 @@ var studyButton = document.querySelector(".study");
 var medButton = document.querySelector(".meditate");
 var exeButton = document.querySelector(".exercise");
 var submitButton = document.querySelector(".submit-button");
+var logActivityButton = document.querySelector(".log-activity-button")
 var newActivity = document.querySelector(".new-activity");
 var currentActivity = document.querySelector(".current-activity");
 var inputForm = document.querySelector(".input-form");
@@ -54,6 +55,12 @@ function changeButton(button, color){
   }
 }
 
+// if(minInput.value.length == 0) {
+// minInput.value = 0;
+// }
+// if(secInput.value.length == 0) {
+//   secInput.value = 00;
+// }
 
 function startCountdown(){
 var seconds = secInput.value;
@@ -62,6 +69,9 @@ setInterval( countOne, 1000);
 // min edit that doesnt work
 var minutes = minInput.value;
 // setInterval( (countOne, 1000)*60);
+if(seconds < 10){
+  seconds = "0" + seconds;
+}
 
 
 
@@ -69,20 +79,21 @@ var minutes = minInput.value;
     funcSec.innerHTML = seconds;
     seconds = seconds - 1;
     funcMin.innerHTML = minutes;
-    if(seconds === -1){
+    if(minutes > 0 && seconds === -1){
       minutes --;
       seconds = 59;
       console.log("hi");
     }
+    if(seconds === -1){
+      minutes = "0"
+      seconds = "0"
+      timerStart.innerHTML = "COMPLETE!";
+      logActivityButton.classList.remove("hidden-log-button");
+    }
     if(seconds < 10){
       seconds = "0" + seconds;
     }
-    if(minutes === -1){
-      minutes = "00"
-      seconds = "00"
-      return timerStart.innerHTML = "COMPLETE!"
-      //run alert
-    }
+
 
     // funcMin.innerHTML = minutes;
   }
@@ -91,6 +102,12 @@ var minutes = minInput.value;
 
 
 function changeForm() {
+  if(minInput.value.length == 0) {
+  minInput.value = 0;
+  }
+  if(secInput.value.length == 0) {
+    secInput.value = 00;
+  }
   if(accomplishInput.value === "") {
     event.preventDefault(submitButton);
     errorDescription.classList.remove("hide-error");
@@ -106,50 +123,7 @@ function changeForm() {
     funcMin.innerHTML = minInput.value;
     if(secInput.value < 10){
       funcSec.innerHTML = "0" + funcSec.innerHTML;
+
     }
 }
 }
-
-
-
-
-//
-// function changeStudy(){
-//   event.preventDefault(studyButton);
-//   if(studyButton.classList.contains("change-green")){
-//     studyButton.classList.remove("change-green");
-//     timerStart.classList.remove("green-border");
-// } else{
-//     studyButton.classList.add("change-green");
-//     timerStart.classList.add("green-border");
-// }
-//
-// medButton.classList.remove("change-purple");
-// exeButton.classList.remove("change-orange");
-// }
-//
-// function changeMeditate(){
-//   event.preventDefault(medButton);
-//   if(medButton.classList.contains("change-purple")){
-//     medButton.classList.remove("change-purple");
-//     timerStart.classList.remove("purple-border");
-// } else{
-//     medButton.classList.add("change-purple");
-//     timerStart.classList.add("purple-border");
-// }
-// studyButton.classList.remove("change-green");
-// exeButton.classList.remove("change-orange");
-// }
-//
-// function changeExercise(){
-//   event.preventDefault(exeButton);
-//   if(exeButton.classList.contains("change-orange")){
-//     exeButton.classList.remove("change-orange");
-//     timerStart.classList.remove("orange-border");
-// } else{
-//     exeButton.classList.add("change-orange");
-//     timerStart.classList.add("orange-border");
-// }
-// studyButton.classList.remove("change-green");
-// medButton.classList.remove("change-purple");
-// }
