@@ -36,13 +36,16 @@ main {
 
 h2 {
   display: block;
-  margin: 20px 20px 0px 20px;
+  margin: 20px 20px 20px 20px;
   color: #CBC9CF;
 }
 
 h3 {
   color: #FFF;
-  margin-top: 10%;
+}
+
+.card-margins {
+margin: 5px 0px 0px 5px;
 }
 
 form {
@@ -66,6 +69,14 @@ aside {
   text-align: center;
   font-size: 14px;
   margin: 20px 20px 0px 20px;
+}
+
+.aside-section {
+  margin: 0px 5% 0px 5%;
+}
+.logged-card {
+  background-color: #46424D;
+  border-radius: 5px;
 }
 
 input {
@@ -244,6 +255,25 @@ input {
   font-size: 14px;
 }
 
-.red {
-  border: 4px solid red;
+.color-bar {
+  height: 30px;
+  width: 3px;
+  margin: 10px;
+}
+
+.green-bar {
+  background-color: #B3FD78;
+}
+
+.purple-bar {
+  background-color: #C278FD;
+}
+
+.orange-bar {
+  background-color: #FD8078;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: space-between;
 }

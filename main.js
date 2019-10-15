@@ -18,6 +18,8 @@ var funcMin = document.getElementById("min");
 // log activity
 var logActivityButton = document.querySelector(".log-activity-button");
 var noLogMessage = document.querySelector(".no-log-message");
+var cardContainer = document.querySelector(".aside-section");
+var cardColor = document.querySelector(".color-bar");
 
 studyButton.addEventListener("click", function (){
   changeButton(studyButton, "green")
@@ -31,7 +33,7 @@ exeButton.addEventListener("click", function(){
 submitButton.addEventListener("click", changeForm);
 timerStart.addEventListener("click", startCountdown);
 
-// log activity
+// log activity start
 logActivityButton.addEventListener("click", logActivity);
 
 
@@ -40,19 +42,36 @@ function logActivity () {
   if (noLogMessage.classList.contains("no-log-message")) {
     noLogMessage.classList.add("hide-form");
   }
+  if(timerStart.classList.contains("green-border")){
+    var card = "Study";
+    var color = "green";
+    // cardColor.style.backgroundColor = "#B3FD78";
+    // cardColor.classList.add("green-bar");
+  }
+  if(timerStart.classList.contains("purple-border")){
+      var card = "Meditate";
+      var color = "purple";
+  }
+  if(timerStart.classList.contains("orange-border")){
+      var card = "Exercise";
+      var color = "orange";
+  }
+  addCard(card,color);
 }
 
-function addCard() {
+function addCard(card, color) {
+  console.log('you tried adding a card');
   cardContainer.innerHTML += `
-    <section class="card">
-      <h2>Title of New Card</h2>
-      <p>Text on new card</p>
-      <button class="delete-button">Delete</button>
-    </section>
-  `;
+  <div class="logged-card">
+    <div class="card-flex">
+      <h3 class="card-margins">${card}</h3>
+      <div class="color-bar ${color}-bar"></div>
+    </div>
+    <p class="card-margins">${minInput.value} MIN ${secInput.value} SECONDS</p>
+    <p class="card-margins">${accomplishInput.value}</p>
+  </div>`;
 }
-
-// log activity
+// log activity end
 function changeButton(button, color){
   // console.log(event, button, color);
   event.preventDefault();
