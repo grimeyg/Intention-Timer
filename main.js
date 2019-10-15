@@ -2,7 +2,6 @@ var studyButton = document.querySelector(".study");
 var medButton = document.querySelector(".meditate");
 var exeButton = document.querySelector(".exercise");
 var submitButton = document.querySelector(".submit-button");
-var logActivityButton = document.querySelector(".log-activity-button")
 var newActivity = document.querySelector(".new-activity");
 var currentActivity = document.querySelector(".current-activity");
 var inputForm = document.querySelector(".input-form");
@@ -14,11 +13,11 @@ var toAccomplish = document.querySelector(".to-accomplish");
 // timer
 var secInput = document.getElementById("second-input");
 var minInput = document.getElementById("minute-input");
-// timer
 var funcSec = document.getElementById("sec");
-// min edit
 var funcMin = document.getElementById("min");
-
+// log activity
+var logActivityButton = document.querySelector(".log-activity-button");
+var noLogMessage = document.querySelector(".no-log-message");
 
 studyButton.addEventListener("click", function (){
   changeButton(studyButton, "green")
@@ -32,7 +31,28 @@ exeButton.addEventListener("click", function(){
 submitButton.addEventListener("click", changeForm);
 timerStart.addEventListener("click", startCountdown);
 
+// log activity
+logActivityButton.addEventListener("click", logActivity);
 
+
+function logActivity () {
+  event.preventDefault();
+  if (noLogMessage.classList.contains("no-log-message")) {
+    noLogMessage.classList.add("hide-form");
+  }
+}
+
+function addCard() {
+  cardContainer.innerHTML += `
+    <section class="card">
+      <h2>Title of New Card</h2>
+      <p>Text on new card</p>
+      <button class="delete-button">Delete</button>
+    </section>
+  `;
+}
+
+// log activity
 function changeButton(button, color){
   // console.log(event, button, color);
   event.preventDefault();
@@ -55,13 +75,6 @@ function changeButton(button, color){
   }
 }
 
-// if(minInput.value.length == 0) {
-// minInput.value = 0;
-// }
-// if(secInput.value.length == 0) {
-//   secInput.value = 00;
-// }
-
 function startCountdown(){
 var seconds = secInput.value;
 setInterval( countOne, 1000);
@@ -72,9 +85,6 @@ var minutes = minInput.value;
 if(seconds < 10){
   seconds = "0" + seconds;
 }
-
-
-
   function countOne(){
     funcSec.innerHTML = seconds;
     seconds = seconds - 1;
@@ -93,13 +103,8 @@ if(seconds < 10){
     if(seconds < 10){
       seconds = "0" + seconds;
     }
-
-
-    // funcMin.innerHTML = minutes;
   }
 }
-
-
 
 function changeForm() {
   if(minInput.value.length == 0) {
