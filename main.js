@@ -2,7 +2,6 @@ var studyButton = document.querySelector(".study");
 var medButton = document.querySelector(".meditate");
 var exeButton = document.querySelector(".exercise");
 var submitButton = document.querySelector(".submit-button");
-var logActivityButton = document.querySelector(".log-activity-button")
 var newActivity = document.querySelector(".new-activity");
 var currentActivity = document.querySelector(".current-activity");
 var inputForm = document.querySelector(".input-form");
@@ -14,11 +13,13 @@ var toAccomplish = document.querySelector(".to-accomplish");
 // timer
 var secInput = document.getElementById("second-input");
 var minInput = document.getElementById("minute-input");
-// timer
 var funcSec = document.getElementById("sec");
-// min edit
 var funcMin = document.getElementById("min");
-
+// log activity
+var logActivityButton = document.querySelector(".log-activity-button");
+var noLogMessage = document.querySelector(".no-log-message");
+var cardContainer = document.querySelector(".aside-section");
+var cardColor = document.querySelector(".color-bar");
 
 studyButton.addEventListener("click", function (){
   changeButton(studyButton, "green")
@@ -32,7 +33,45 @@ exeButton.addEventListener("click", function(){
 submitButton.addEventListener("click", changeForm);
 timerStart.addEventListener("click", startCountdown);
 
+// log activity start
+logActivityButton.addEventListener("click", logActivity);
 
+
+function logActivity () {
+  event.preventDefault();
+  if (noLogMessage.classList.contains("no-log-message")) {
+    noLogMessage.classList.add("hide-form");
+  }
+  if(timerStart.classList.contains("green-border")){
+    var card = "Study";
+    var color = "green";
+    // cardColor.style.backgroundColor = "#B3FD78";
+    // cardColor.classList.add("green-bar");
+  }
+  if(timerStart.classList.contains("purple-border")){
+      var card = "Meditate";
+      var color = "purple";
+  }
+  if(timerStart.classList.contains("orange-border")){
+      var card = "Exercise";
+      var color = "orange";
+  }
+  addCard(card,color);
+}
+
+function addCard(card, color) {
+  console.log('you tried adding a card');
+  cardContainer.innerHTML += `
+  <div class="logged-card">
+    <div class="card-flex">
+      <h3 class="card-margins">${card}</h3>
+      <div class="color-bar ${color}-bar"></div>
+    </div>
+    <p class="card-margins">${minInput.value} MIN ${secInput.value} SECONDS</p>
+    <p class="card-margins">${accomplishInput.value}</p>
+  </div>`;
+}
+// log activity end
 function changeButton(button, color){
   // console.log(event, button, color);
   event.preventDefault();
@@ -55,13 +94,6 @@ function changeButton(button, color){
   }
 }
 
-// if(minInput.value.length == 0) {
-// minInput.value = 0;
-// }
-// if(secInput.value.length == 0) {
-//   secInput.value = 00;
-// }
-
 function startCountdown(){
 var seconds = secInput.value;
 setInterval( countOne, 1000);
@@ -72,9 +104,6 @@ var minutes = minInput.value;
 if(seconds < 10){
   seconds = "0" + seconds;
 }
-
-
-
   function countOne(){
     funcSec.innerHTML = seconds;
     seconds = seconds - 1;
@@ -93,13 +122,8 @@ if(seconds < 10){
     if(seconds < 10){
       seconds = "0" + seconds;
     }
-
-
-    // funcMin.innerHTML = minutes;
   }
 }
-
-
 
 function changeForm() {
   if(minInput.value.length == 0) {
