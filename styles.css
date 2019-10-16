@@ -7,12 +7,12 @@
 body {
   background-color: #2B2733;
   color: #ffffff;
-  padding: 0px;
-  margin: 0px auto;
-  font-family: Montserrat;
   display: flex;
   flex-wrap:wrap;
+  font-family: Montserrat;
   font-weight: 300;
+  margin: 0px auto;
+  padding: 0px;
 }
 
 header {
