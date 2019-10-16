@@ -20,16 +20,16 @@
           <button class="category meditate">Meditate</button>
           <button class="category exercise">Exercise</button>
         </div>
-        <h3>What would you like to accomplish during this time?</h3>
+        <h3 class ="spacing">What would you like to accomplish during this time?</h3>
         <input class="accomplish">
         <p class="error-description hide-error"><img src="./assets/warning.svg">A description is required. </p>
         <section id="timer-layout">
           <div class="timer-input">
-            <h3>Minutes</h3>
+            <h3 class ="spacing">Minutes</h3>
             <input id="minute-input" placeholder=0 type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
           <div class="timer-input">
-            <h3 >Seconds</H3>
+            <h3 class ="spacing">Seconds</H3>
             <input id="second-input" placeholder=0 type="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
           </div>
         </section>

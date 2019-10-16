@@ -56,6 +56,7 @@ function logActivity () {
       var card = "Exercise";
       var color = "orange";
   }
+  
   addCard(card,color);
 }
 

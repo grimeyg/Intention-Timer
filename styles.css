@@ -44,10 +44,6 @@ h3 {
   color: #FFF;
 }
 
-.card-margins {
-margin: 5px 0px 0px 5px;
-}
-
 form {
   display:flex;
   background-color: #46424D;
@@ -65,6 +61,17 @@ aside {
   flex-direction: column;
 }
 
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+p img {
+  height: 14px;
+  margin-right: 5px;
+}
+
 .no-log-message {
   text-align: center;
   font-size: 14px;
@@ -79,15 +86,12 @@ aside {
   border-radius: 5px;
 }
 
-input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #000000;
+.card-margins {
+margin: 5px 0px 0px 5px;
 }
 
-p img {
-  height: 14px;
-  margin-right: 5px;
+.new-activity {
+margin-bottom: 0px;
 }
 
 .error-description {
@@ -184,11 +188,10 @@ input {
 
 .submit-button {
   align-self: flex-end;
-  width: 25%;
-  padding: 1%;
-  border-radius: 2px;
-  margin-top: inherit;
+  width: 28%;
+  padding: 2%;
   font-size: 14px;
+  margin-bottom: 0px;
 }
 
 .timer-form {
@@ -276,4 +279,15 @@ input {
 .card-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.spacing {
+  margin-top: 70px;
+}
+
+.input-form {
+  padding: 20px 100px 45px 100px;
+}
+#submit-form {
+  margin-top: 50px;
 }
