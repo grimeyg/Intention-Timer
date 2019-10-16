@@ -12,8 +12,8 @@
     </header>
     <main>
       <h2 class="new-activity">New Activity</h2>
-      <h2 class="current-activity hidden-timer">Current Activity</h2>
-      <h2 class="completed-activity hidden-timer">Completed Activity</h2>
+      <h2 class="current-activity hide-item">Current Activity</h2>
+      <h2 class="completed-activity hide-item">Completed Activity</h2>
       <form class="input-form">
         <h3>Select a category:</h3>
         <div id="button-layout">
@@ -23,7 +23,7 @@
         </div>
         <h3 class ="spacing">What would you like to accomplish during this time?</h3>
         <input class="accomplish">
-        <p class="error-description hide-error"><img src="./assets/warning.svg">A description is required. </p>
+        <p class="error-description hide-item"><img src="./assets/warning.svg">A description is required. </p>
         <section id="timer-layout">
           <div class="timer-input">
             <h3 class ="spacing">Minutes</h3>
@@ -36,7 +36,7 @@
         </section>
         <button id="submit-form" class="submit-button" type="button">START ACTIVITY</button>
       </form>
-      <form class="timer-form hidden-timer">
+      <form class="timer-form hide-item">
         <h3 class="to-accomplish"></h3>
         <div id="activity-timer">
           <div id="min"></div><div id="colon">:</div>
@@ -45,7 +45,7 @@
         <button class="activity-start" type="button">START</button>
         <button class="log-activity-button hidden-log-button">LOG ACTIVITY</button>
       </form>
-      <form class="new-form hidden-timer">
+      <form class="new-form hide-item">
         <button class="new-form-button">CREATE A NEW ACTIVITY</button>
       </form>
     </main>

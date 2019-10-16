@@ -115,10 +115,6 @@ margin-bottom: 0px;
   color: #EFB7EC;
 }
 
-.hide-error {
-  display: none;
-}
-
 .category {
   align-items: center;
   background-color: #46424D;
@@ -216,10 +212,6 @@ margin-bottom: 0px;
   margin-bottom: 40px;
 }
 
-.hidden-log-button{
-  visibility: hidden;
-}
-
 .activity-start {
   background-color: #46424D;
   border-radius: 50%;
@@ -228,10 +220,6 @@ margin-bottom: 0px;
   font-size: 20px;
   height: 200px;
   width: 200px;
-}
-
-.hide-form {
-  display: none;
 }
 
 .green-border {
@@ -307,6 +295,10 @@ margin-bottom: 0px;
   margin-bottom: 0px;
 }
 
+.hidden-log-button{
+  visibility: hidden;
+}
+
 .accomplish{
   font-size: 20px;
 }
@@ -329,7 +321,7 @@ margin-bottom: 0px;
   width: 50%;
 }
 
-.hidden-timer {
+.hide-item {
   display: none;
 }
 
