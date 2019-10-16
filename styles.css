@@ -96,12 +96,8 @@ input {
 
 .logged-card {
   background-color: #46424D;
-<<<<<<< HEAD
   border-radius: 3px;
-=======
-  border-radius: 5px;
   box-shadow: 5px 4px 4px rgba(0, 0, 0, .2);
->>>>>>> e5e71876b33810c38efd6c9c245022da9c9042b0
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -208,11 +204,8 @@ margin-bottom: 0px;
 
 .timer-form {
   align-items: center;
-<<<<<<< HEAD
   border-radius: 3px;
-=======
   box-shadow: 5px 4px 4px rgba(0, 0, 0, .2);
->>>>>>> e5e71876b33810c38efd6c9c245022da9c9042b0
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -301,12 +294,8 @@ margin-bottom: 0px;
 }
 
 .input-form {
-<<<<<<< HEAD
   border-radius: 3px;
-=======
-  border-radius: 5px;
   box-shadow: 5px 4px 4px rgba(0, 0, 0, .2);
->>>>>>> e5e71876b33810c38efd6c9c245022da9c9042b0
   padding: 20px 100px 45px 100px;
 }
 
@@ -322,7 +311,6 @@ margin-bottom: 0px;
   font-size: 20px;
 }
 
-<<<<<<< HEAD
 .new-form {
   align-items: center;
   border-radius: 3px;
@@ -343,8 +331,9 @@ margin-bottom: 0px;
 
 .hidden-timer {
   display: none;
-=======
-.to-accomplish{
+}
+
+.to-accomplish {
   font-size: 30px;
   margin-bottom: 5px;
 }
