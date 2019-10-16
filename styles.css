@@ -35,9 +35,9 @@ main {
 }
 
 h2 {
+  color: #CBC9CF;
   display: block;
   margin: 20px 20px 20px 20px;
-  color: #CBC9CF;
 }
 
 h3 {
@@ -45,20 +45,20 @@ h3 {
 }
 
 form {
-  display:flex;
   background-color: #46424D;
-  padding: 20px 100px 100px 100px;
-  margin:20px;
-  width:93%;
+  display:flex;
   flex-direction:column;
+  margin:20px;
+  padding: 20px 100px 100px 100px;
+  width:93%;
 }
 
 aside {
-  width:33%;
   border-left: 3px solid #46424D;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
+  width:33%;
 }
 
 input {
@@ -73,9 +73,9 @@ p img {
 }
 
 .no-log-message {
-  text-align: center;
   font-size: 14px;
   margin: 20px 20px 0px 20px;
+  text-align: center;
 }
 
 .aside-section {
@@ -84,9 +84,9 @@ p img {
 .logged-card {
   background-color: #46424D;
   border-radius: 5px;
-  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .card-margins {
@@ -106,16 +106,16 @@ margin-bottom: 0px;
 }
 
 .category {
-  width:20%;
-  border: 2px solid #FFF;
-  border-radius: 2px;
+  align-items: center;
   background-color: #46424D;
+  border-radius: 2px;
+  border: 2px solid #FFF;
+  color: #CBC9CF;
   display: flex;
   flex-direction: column-reverse;
   font-size: 16px;
-  align-items: center;
-  color: #CBC9CF;
   height: 80px;
+  width:23%;
 }
 
 #button-layout {
@@ -127,39 +127,39 @@ margin-bottom: 0px;
 
 .study {
   background-image: url(./assets/study.svg);
-  background-repeat: no-repeat;
   background-position: 50% 30%;
+  background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 
 .meditate {
   background-image: url(./assets/meditate.svg);
-  background-repeat: no-repeat;
   background-position: 50% 30%;
+  background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 
 .exercise {
   background-image: url(./assets/exercise.svg);
-  background-repeat: no-repeat;
   background-position: 50% 30%;
+  background-repeat: no-repeat;
   background-size: 40px 40px;
 }
 
 input {
-  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #CBC9CF
+  border: none;
   color: #FFF;
   font-size: 14px;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #CBC9CF
+  outline: none;
 
 }
 
 .timer-input {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
   width:40%;
 }
 
@@ -169,39 +169,39 @@ input {
 }
 
 .change-green {
-  border-color: #B3FD78;
-  outline: none;
   background-image: url(./assets/study-active.svg);
+  border-color: #B3FD78;
   color: #B3FD78;
+  outline: none;
 }
 
 .change-purple {
-  border-color: #C278FD;
-  outline: none;
   background-image: url(./assets/meditate-active.svg);
+  border-color: #C278FD;
   color: #C278FD;
+  outline: none;
 }
 
 .change-orange {
-  border-color: #FD8078;
-  outline: none;
   background-image: url(./assets/exercise-active.svg);
+  border-color: #FD8078;
   color: #FD8078;
+  outline: none;
 }
 
 .submit-button {
   align-self: flex-end;
-  width: 28%;
-  padding: 2%;
   font-size: 14px;
   margin-bottom: 0px;
+  padding: 2%;
+  width: 28%;
 }
 
 .timer-form {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 #min, #sec, #colon{
@@ -218,13 +218,13 @@ input {
 }
 
 .activity-start {
-  border: 2px solid #FFF;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  color: #fff;
   background-color: #46424D;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  color: #fff;
   font-size: 20px;
+  height: 200px;
+  width: 200px;
 }
 
 .hide-form {
@@ -249,23 +249,23 @@ input {
 #activity-timer {
   display: flex;
   flex-direction: row;
+  font-weight: ;
   justify-content: center;
   width: 20%;
-  font-weight: ;
 }
 
 .log-activity-button {
-  width: 200px;
-  height: 30px;
   border-radius: 2px;
-  margin-top: 10%;
   font-size: 14px;
+  height: 30px;
+  margin-top: 10%;
+  width: 200px;
 }
 
 .color-bar {
   height: 30px;
-  width: 3px;
   margin: 10px;
+  width: 3px;
 }
 
 .green-bar {
@@ -282,8 +282,8 @@ input {
 
 .card-flex {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .spacing {
