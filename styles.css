@@ -46,6 +46,7 @@ h3 {
 
 form {
   background-color: #46424D;
+  border-radius: 3px;
   display:flex;
   flex-direction:column;
   margin:20px;
@@ -55,6 +56,7 @@ form {
 
 aside {
   border-left: 3px solid #46424D;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -83,7 +85,7 @@ p img {
 }
 .logged-card {
   background-color: #46424D;
-  border-radius: 5px;
+  border-radius: 3px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -108,7 +110,7 @@ margin-bottom: 0px;
 .category {
   align-items: center;
   background-color: #46424D;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 2px solid #FFF;
   color: #CBC9CF;
   display: flex;
@@ -191,6 +193,7 @@ input {
 
 .submit-button {
   align-self: flex-end;
+  border-radius: 3px;
   font-size: 14px;
   margin-bottom: 0px;
   padding: 2%;
@@ -199,6 +202,7 @@ input {
 
 .timer-form {
   align-items: center;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -207,10 +211,6 @@ input {
 #min, #sec, #colon{
   font-size: 50px;
   margin-bottom: 40px;
-}
-
-.hidden-timer {
-  display: none;
 }
 
 .hidden-log-button{
@@ -255,7 +255,7 @@ input {
 }
 
 .log-activity-button {
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 14px;
   height: 30px;
   margin-top: 10%;
@@ -291,6 +291,7 @@ input {
 }
 
 .input-form {
+  border-radius: 3px;
   padding: 20px 100px 45px 100px;
 }
 #submit-form {
@@ -303,4 +304,26 @@ input {
 
 .accomplish{
   font-size: 20px;
+}
+
+.new-form {
+  align-items: center;
+  border-radius: 3px;
+  display: flex;
+  height: 555px;
+}
+
+.completed-activity {
+  margin-bottom: 0px;
+}
+.new-form-button {
+  border-radius: 3px;
+  font-size: 14px;
+  height: 8%;
+  margin: 15%;
+  width: 50%;
+}
+
+.hidden-timer {
+  display: none;
 }
