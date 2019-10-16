@@ -2,6 +2,7 @@ var accomplishInput = document.querySelector(".accomplish");
 var cardColor = document.querySelector(".color-bar");
 var cardContainer = document.querySelector(".aside-section");
 var currentActivity = document.querySelector(".current-activity");
+var completedActivity = document.querySelector(".completed-activity");
 var errorDescription = document.querySelector(".error-description");
 var exeButton = document.querySelector(".exercise");
 var funcMin = document.getElementById("min");
@@ -11,6 +12,8 @@ var logActivityButton = document.querySelector(".log-activity-button");
 var medButton = document.querySelector(".meditate");
 var minInput = document.getElementById("minute-input");
 var newActivity = document.querySelector(".new-activity");
+var newForm = document.querySelector(".new-form");
+var newFormButton = document.querySelector(".new-form-button")
 var noLogMessage = document.querySelector(".no-log-message");
 var secInput = document.getElementById("second-input");
 var studyButton = document.querySelector(".study");
@@ -36,6 +39,8 @@ submitButton.addEventListener("click", changeForm);
 timerStart.addEventListener("click", startCountdown);
 
 logActivityButton.addEventListener("click", logActivity);
+
+newFormButton.addEventListener("click", createNewForm)
 
 function changeButton(button, color){
   event.preventDefault();
@@ -102,8 +107,8 @@ function startCountdown() {
       console.log("hi");
     }
     if (seconds === -1) {
-      minutes = "0"
-      seconds = "0"
+      minutes = "0";
+      seconds = "0";
       timerStart.innerHTML = "COMPLETE!";
       logActivityButton.classList.remove("hidden-log-button");
     }
@@ -132,8 +137,11 @@ function logActivity () {
       var card = "Exercise";
       var color = "orange";
   }
-
   addCard(card,color);
+  timerForm.classList.add("hidden-timer");
+  currentActivity.classList.add("hidden-timer");
+  completedActivity.classList.remove("hidden-timer");
+  newForm.classList.remove("hidden-timer");
 }
 
 function addCard(card, color) {
@@ -147,4 +155,17 @@ function addCard(card, color) {
     </div>
     <div class="color-bar ${color}-bar"></div>
   </div>`;
+}
+
+function createNewForm(color) {
+  event.preventDefault();
+  newForm.classList.add("hidden-timer");
+  completedActivity.classList.add("hidden-timer");
+  newActivity.classList.remove("hide-form");
+  inputForm.classList.remove("hide-form");
+  inputForm.reset();
+  studyButton.classList.remove("change-green");
+  medButton.classList.remove("change-purple");    exeButton.classList.remove("change-orange");
+  timerStart.classList.remove("green-border", "purple-border", "orange-border");
+  timerStart.innerHTML = "START";
 }
