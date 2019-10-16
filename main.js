@@ -56,7 +56,7 @@ function logActivity () {
       var card = "Exercise";
       var color = "orange";
   }
-  
+
   addCard(card,color);
 }
 
@@ -66,10 +66,10 @@ function addCard(card, color) {
   <div class="logged-card">
     <div class="card-flex">
       <h3 class="card-margins">${card}</h3>
-      <div class="color-bar ${color}-bar"></div>
+      <p class="card-margins">${minInput.value} MIN ${secInput.value} SECONDS</p>
+      <p class="card-margins">${accomplishInput.value}</p>
     </div>
-    <p class="card-margins">${minInput.value} MIN ${secInput.value} SECONDS</p>
-    <p class="card-margins">${accomplishInput.value}</p>
+    <div class="color-bar ${color}-bar"></div>
   </div>`;
 }
 // log activity end
