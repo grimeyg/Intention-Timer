@@ -38,6 +38,7 @@ h2 {
   color: #CBC9CF;
   display: block;
   margin: 20px 20px 20px 20px;
+  width: 100%;
 }
 
 h3 {
@@ -72,6 +73,15 @@ p img {
   margin-right: 5px;
 }
 
+input {
+  background: transparent;
+  border-bottom: 1px solid #CBC9CF
+  border: none;
+  color: #FFF;
+  font-size: 14px;
+  outline: none;
+}
+
 .no-log-message {
   font-size: 14px;
   margin: 20px 20px 0px 20px;
@@ -81,6 +91,7 @@ p img {
 .aside-section {
   margin: 0px 5% 0px 5%;
 }
+
 .logged-card {
   background-color: #46424D;
   border-radius: 5px;
@@ -116,14 +127,14 @@ margin-bottom: 0px;
   flex-direction: column-reverse;
   font-size: 16px;
   height: 80px;
-  width:23%;
+  margin: 0px 5px 0px 5px;
+  width:165px;
 }
 
 #button-layout {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 .study {
@@ -145,16 +156,6 @@ margin-bottom: 0px;
   background-position: 50% 30%;
   background-repeat: no-repeat;
   background-size: 40px 40px;
-}
-
-input {
-  background: transparent;
-  border-bottom: 1px solid #CBC9CF
-  border: none;
-  color: #FFF;
-  font-size: 14px;
-  outline: none;
-
 }
 
 .timer-input {
@@ -195,7 +196,7 @@ input {
   font-size: 14px;
   margin-bottom: 0px;
   padding: 2%;
-  width: 28%;
+  width: 175px;
 }
 
 .timer-form {
@@ -260,7 +261,7 @@ input {
   border-radius: 2px;
   font-size: 14px;
   height: 30px;
-  margin-top: 10%;
+  margin-top: 7%;
   width: 200px;
 }
 
@@ -308,4 +309,59 @@ input {
 
 .accomplish{
   font-size: 20px;
+}
+
+.to-accomplish{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+/* media query */
+
+@media only screen and (max-width: 750px) {
+  #button-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  body{
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  main {
+  width:80%
+  }
+
+  aside {
+    border-left: 0px;
+    padding: 10px;
+    width: 80%;
+  }
+
+  .no-log-message{
+    margin-bottom: 40px;
+  }
+
+  #submit-form{
+    font-size: 10px;
+  }
+
+  .submit-button {
+    align-self: center;
+    width: 125px;
+  }
+
+  .input-form {
+    padding: 10px;
+  }
+
+  .category{
+    margin-bottom: 5px;
+  }
 }
