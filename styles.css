@@ -38,6 +38,7 @@ h2 {
   color: #CBC9CF;
   display: block;
   margin: 20px 20px 20px 20px;
+  width: 100%;
 }
 
 h3 {
@@ -74,6 +75,15 @@ p img {
   margin-right: 5px;
 }
 
+input {
+  background: transparent;
+  border-bottom: 1px solid #CBC9CF
+  border: none;
+  color: #FFF;
+  font-size: 14px;
+  outline: none;
+}
+
 .no-log-message {
   font-size: 14px;
   margin: 20px 20px 0px 20px;
@@ -83,9 +93,15 @@ p img {
 .aside-section {
   margin: 0px 5% 0px 5%;
 }
+
 .logged-card {
   background-color: #46424D;
+<<<<<<< HEAD
   border-radius: 3px;
+=======
+  border-radius: 5px;
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, .2);
+>>>>>>> e5e71876b33810c38efd6c9c245022da9c9042b0
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -117,14 +133,14 @@ margin-bottom: 0px;
   flex-direction: column-reverse;
   font-size: 16px;
   height: 80px;
-  width:23%;
+  margin: 0px 5px 0px 5px;
+  width:165px;
 }
 
 #button-layout {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 .study {
@@ -146,16 +162,6 @@ margin-bottom: 0px;
   background-position: 50% 30%;
   background-repeat: no-repeat;
   background-size: 40px 40px;
-}
-
-input {
-  background: transparent;
-  border-bottom: 1px solid #CBC9CF
-  border: none;
-  color: #FFF;
-  font-size: 14px;
-  outline: none;
-
 }
 
 .timer-input {
@@ -197,12 +203,16 @@ input {
   font-size: 14px;
   margin-bottom: 0px;
   padding: 2%;
-  width: 28%;
+  width: 175px;
 }
 
 .timer-form {
   align-items: center;
+<<<<<<< HEAD
   border-radius: 3px;
+=======
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, .2);
+>>>>>>> e5e71876b33810c38efd6c9c245022da9c9042b0
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,7 +268,7 @@ input {
   border-radius: 3px;
   font-size: 14px;
   height: 30px;
-  margin-top: 10%;
+  margin-top: 7%;
   width: 200px;
 }
 
@@ -291,9 +301,15 @@ input {
 }
 
 .input-form {
+<<<<<<< HEAD
   border-radius: 3px;
+=======
+  border-radius: 5px;
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, .2);
+>>>>>>> e5e71876b33810c38efd6c9c245022da9c9042b0
   padding: 20px 100px 45px 100px;
 }
+
 #submit-form {
   margin-top: 50px;
 }
@@ -306,6 +322,7 @@ input {
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 .new-form {
   align-items: center;
   border-radius: 3px;
@@ -326,4 +343,59 @@ input {
 
 .hidden-timer {
   display: none;
+=======
+.to-accomplish{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+/* media query */
+
+@media only screen and (max-width: 750px) {
+  #button-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  body{
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  main {
+  width:80%
+  }
+
+  aside {
+    border-left: 0px;
+    padding: 10px;
+    width: 80%;
+  }
+
+  .no-log-message{
+    margin-bottom: 40px;
+  }
+
+  #submit-form{
+    font-size: 10px;
+  }
+
+  .submit-button {
+    align-self: center;
+    width: 125px;
+  }
+
+  .input-form {
+    padding: 10px;
+  }
+
+  .category{
+    margin-bottom: 5px;
+  }
+>>>>>>> e5e71876b33810c38efd6c9c245022da9c9042b0
 }
