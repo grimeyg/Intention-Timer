@@ -84,6 +84,9 @@ p img {
 .logged-card {
   background-color: #46424D;
   border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-margins {
@@ -202,7 +205,8 @@ input {
 }
 
 #min, #sec, #colon{
-  font-size: 36px;
+  font-size: 50px;
+  margin-bottom: 40px;
 }
 
 .hidden-timer {
@@ -210,7 +214,7 @@ input {
 }
 
 .hidden-log-button{
-  display: none;
+  visibility: hidden;
 }
 
 .activity-start {
@@ -279,6 +283,7 @@ input {
 .card-flex {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .spacing {
@@ -290,4 +295,12 @@ input {
 }
 #submit-form {
   margin-top: 50px;
+}
+
+.current-activity {
+  margin-bottom: 0px;
+}
+
+.accomplish{
+  font-size: 20px;
 }

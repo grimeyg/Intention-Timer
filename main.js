@@ -37,8 +37,44 @@ timerStart.addEventListener("click", startCountdown);
 
 logActivityButton.addEventListener("click", logActivity);
 
-function changeButton(button, color) {
-  // console.log(event, button, color);
+
+function logActivity () {
+  event.preventDefault();
+  if (noLogMessage.classList.contains("no-log-message")) {
+    noLogMessage.classList.add("hide-form");
+  }
+  if(timerStart.classList.contains("green-border")){
+    var card = "Study";
+    var color = "green";
+    // cardColor.style.backgroundColor = "#B3FD78";
+    // cardColor.classList.add("green-bar");
+  }
+  if(timerStart.classList.contains("purple-border")){
+      var card = "Meditate";
+      var color = "purple";
+  }
+  if(timerStart.classList.contains("orange-border")){
+      var card = "Exercise";
+      var color = "orange";
+  }
+
+  addCard(card,color);
+}
+
+function addCard(card, color) {
+  console.log('you tried adding a card');
+  cardContainer.innerHTML += `
+  <div class="logged-card">
+    <div class="card-flex">
+      <h3 class="card-margins">${card}</h3>
+      <p class="card-margins">${minInput.value} MIN ${secInput.value} SECONDS</p>
+      <p class="card-margins">${accomplishInput.value}</p>
+    </div>
+    <div class="color-bar ${color}-bar"></div>
+  </div>`;
+}
+
+function changeButton(button, color){
   event.preventDefault();
   if (button.classList.contains(`change-${color}`)) {
      button.classList.remove(`change-${color}`);
