@@ -22,25 +22,19 @@ var timerForm = document.querySelector(".timer-form");
 var timerStart = document.querySelector(".activity-start");
 var toAccomplish = document.querySelector(".to-accomplish");
 
-studyButton.addEventListener("click", function() {
-  changeButton(studyButton, "green")
-});
-
-medButton.addEventListener("click", function() {
-  changeButton(medButton, "purple")
-});
-
 exeButton.addEventListener("click", function() {
   changeButton(exeButton, "orange")
 });
-
-submitButton.addEventListener("click", changeForm);
-
-timerStart.addEventListener("click", startCountdown);
-
+medButton.addEventListener("click", function() {
+  changeButton(medButton, "purple")
+});
+studyButton.addEventListener("click", function() {
+  changeButton(studyButton, "green")
+});
 logActivityButton.addEventListener("click", logActivity);
-
 newFormButton.addEventListener("click", createNewForm)
+submitButton.addEventListener("click", changeForm);
+timerStart.addEventListener("click", startCountdown);
 
 function changeButton(button, color){
   event.preventDefault();
@@ -50,24 +44,27 @@ function changeButton(button, color){
 } else {
     button.classList.add(`change-${color}`);
     timerStart.classList.add(`${color}-border`);
-  }
-  if (color === "green"){
-    medButton.classList.remove("change-purple");
-    exeButton.classList.remove("change-orange");
-  } else if (color === "orange") {
-    studyButton.classList.remove("change-green");
-    medButton.classList.remove("change-purple");
-  }else if (color === "purple") {
-    studyButton.classList.remove("change-green");
-    exeButton.classList.remove("change-orange");
+    if (color === "green"){
+      medButton.classList.remove("change-purple");
+      exeButton.classList.remove("change-orange");
+      timerStart.classList.remove("purple-border", "orange-border");
+    } else if (color === "orange") {
+      studyButton.classList.remove("change-green");
+      medButton.classList.remove("change-purple");
+        timerStart.classList.remove("purple-border", "green-border");
+    }else if (color === "purple") {
+      studyButton.classList.remove("change-green");
+      exeButton.classList.remove("change-orange");
+        timerStart.classList.remove("green-border", "orange-border");
+    }
   }
 }
 
 function changeForm() {
-  if (minInput.value.length == 0) {
+  if (minInput.value.length === 0) {
     minInput.value = 0;
   }
-  if (secInput.value.length == 0) {
+  if (secInput.value.length === 0) {
     secInput.value = 00;
   }
   if (accomplishInput.value === "") {
@@ -81,36 +78,45 @@ function changeForm() {
     currentActivity.classList.remove("hide-item");
     toAccomplish.innerText = accomplishInput.value;
     funcSec.innerHTML = secInput.value;
-    console.log(funcSec.innerHTML);
     funcMin.innerHTML = minInput.value;
     if (secInput.value < 10) {
       funcSec.innerHTML = "0" + funcSec.innerHTML;
-
     }
-}
+    if (minInput.value < 10) {
+      funcMin.innerHTML = "0" + funcMin.innerHTML;
+    }
+  }
 }
 
 function startCountdown() {
+  var countByOne = setInterval(timer, 1000);
   var seconds = secInput.value;
-  setInterval(countOne, 1000);
   var minutes = minInput.value;
+
   if (seconds < 10) {
   seconds = "0" + seconds;
   }
-  function countOne() {
+  if(minutes === undefined){
+    minutes = "00"
+  }
+  if (minutes < 10) {
+  minutes = "0" + minutes;
+  }
+
+  function timer() {
+    funcMin.innerHTML = minutes;
     funcSec.innerHTML = seconds;
     seconds = seconds - 1;
-    funcMin.innerHTML = minutes;
     if (minutes > 0 && seconds === -1) {
       minutes --;
       seconds = 59;
-      console.log("hi");
     }
-    if (seconds === -1) {
+    if (minutes < 1 && seconds === -1) {
       minutes = "0";
       seconds = "0";
       timerStart.innerHTML = "COMPLETE!";
       logActivityButton.classList.remove("hidden-log-button");
+      clearInterval(countByOne);
     }
     if (seconds < 10) {
       seconds = "0" + seconds;
@@ -145,7 +151,6 @@ function logActivity () {
 }
 
 function addCard(card, color) {
-  console.log('you tried adding a card');
   cardContainer.innerHTML += `
   <div class="logged-card">
     <div class="card-flex">
@@ -159,13 +164,15 @@ function addCard(card, color) {
 
 function createNewForm(color) {
   event.preventDefault();
-  newForm.classList.add("hide-item");
   completedActivity.classList.add("hide-item");
-  newActivity.classList.remove("hide-item");
+  exeButton.classList.remove("change-orange");
   inputForm.classList.remove("hide-item");
   inputForm.reset();
+  newActivity.classList.remove("hide-item");
+  newForm.classList.add("hide-item");
+  medButton.classList.remove("change-purple");
   studyButton.classList.remove("change-green");
-  medButton.classList.remove("change-purple");    exeButton.classList.remove("change-orange");
   timerStart.classList.remove("green-border", "purple-border", "orange-border");
   timerStart.innerHTML = "START";
+  logActivityButton.classList.add("hidden-log-button");
 }
