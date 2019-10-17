@@ -72,13 +72,13 @@ function changeForm() {
   }
   if (accomplishInput.value === "") {
     event.preventDefault(submitButton);
-    errorDescription.classList.remove("hide-error");
+    errorDescription.classList.remove("hide-item");
   } else {
     event.preventDefault(submitButton);
-    inputForm.classList.add("hide-form");
-    timerForm.classList.remove("hidden-timer");
-    newActivity.classList.add("hide-form");
-    currentActivity.classList.remove("hidden-timer");
+    inputForm.classList.add("hide-item");
+    timerForm.classList.remove("hide-item");
+    newActivity.classList.add("hide-item");
+    currentActivity.classList.remove("hide-item");
     toAccomplish.innerText = accomplishInput.value;
     funcSec.innerHTML = secInput.value;
     console.log(funcSec.innerHTML);
@@ -121,7 +121,7 @@ function startCountdown() {
 function logActivity () {
   event.preventDefault();
   if (noLogMessage.classList.contains("no-log-message")) {
-    noLogMessage.classList.add("hide-form");
+    noLogMessage.classList.add("hide-item");
   }
   if(timerStart.classList.contains("green-border")){
     var card = "Study";
@@ -138,10 +138,10 @@ function logActivity () {
       var color = "orange";
   }
   addCard(card,color);
-  timerForm.classList.add("hidden-timer");
-  currentActivity.classList.add("hidden-timer");
-  completedActivity.classList.remove("hidden-timer");
-  newForm.classList.remove("hidden-timer");
+  timerForm.classList.add("hide-item");
+  currentActivity.classList.add("hide-item");
+  completedActivity.classList.remove("hide-item");
+  newForm.classList.remove("hide-item");
 }
 
 function addCard(card, color) {
@@ -159,10 +159,10 @@ function addCard(card, color) {
 
 function createNewForm(color) {
   event.preventDefault();
-  newForm.classList.add("hidden-timer");
-  completedActivity.classList.add("hidden-timer");
-  newActivity.classList.remove("hide-form");
-  inputForm.classList.remove("hide-form");
+  newForm.classList.add("hide-item");
+  completedActivity.classList.add("hide-item");
+  newActivity.classList.remove("hide-item");
+  inputForm.classList.remove("hide-item");
   inputForm.reset();
   studyButton.classList.remove("change-green");
   medButton.classList.remove("change-purple");    exeButton.classList.remove("change-orange");
