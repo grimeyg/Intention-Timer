@@ -132,8 +132,6 @@ function logActivity () {
   if(timerStart.classList.contains("green-border")){
     var card = "Study";
     var color = "green";
-    // cardColor.style.backgroundColor = "#B3FD78";
-    // cardColor.classList.add("green-bar");
   }
   if(timerStart.classList.contains("purple-border")){
       var card = "Meditate";
