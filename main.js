@@ -23,24 +23,11 @@ const timerStart = document.querySelector(".activity-start");
 const toAccomplish = document.querySelector(".to-accomplish");
 const btnContainer = document.querySelector("#button-layout")
 
-
 btnContainer.addEventListener("click", function() {
   let selectedColor = event.target.value;
   let selectedBtn = event.target;
     changeButton(selectedBtn,`${selectedColor}`)
 });
-//
-// exeButton.addEventListener("click", function() {
-//   changeButton(exeButton, "orange")
-// });
-// medButton.addEventListener("click", function() {
-//   changeButton(medButton, "purple")
-// });
-// studyButton.addEventListener("click", function() {
-//   changeButton(studyButton, "green")
-// });
-//
-//
 
 logActivityButton.addEventListener("click", logActivity);
 newFormButton.addEventListener("click", createNewForm)
