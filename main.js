@@ -1,36 +1,47 @@
-var accomplishInput = document.querySelector(".accomplish");
-var cardColor = document.querySelector(".color-bar");
-var cardContainer = document.querySelector(".aside-section");
-var currentActivity = document.querySelector(".current-activity");
-var completedActivity = document.querySelector(".completed-activity");
-var errorDescription = document.querySelector(".error-description");
-var exeButton = document.querySelector(".exercise");
-var funcMin = document.getElementById("min");
-var funcSec = document.getElementById("sec");
-var inputForm = document.querySelector(".input-form");
-var logActivityButton = document.querySelector(".log-activity-button");
-var medButton = document.querySelector(".meditate");
-var minInput = document.getElementById("minute-input");
-var newActivity = document.querySelector(".new-activity");
-var newForm = document.querySelector(".new-form");
-var newFormButton = document.querySelector(".new-form-button")
-var noLogMessage = document.querySelector(".no-log-message");
-var secInput = document.getElementById("second-input");
-var studyButton = document.querySelector(".study");
-var submitButton = document.querySelector(".submit-button");
-var timerForm = document.querySelector(".timer-form");
-var timerStart = document.querySelector(".activity-start");
-var toAccomplish = document.querySelector(".to-accomplish");
+const accomplishInput = document.querySelector(".accomplish");
+const cardColor = document.querySelector(".color-bar");
+const cardContainer = document.querySelector(".aside-section");
+const currentActivity = document.querySelector(".current-activity");
+const completedActivity = document.querySelector(".completed-activity");
+const errorDescription = document.querySelector(".error-description");
+const exeButton = document.querySelector(".exercise");
+const funcMin = document.getElementById("min");
+const funcSec = document.getElementById("sec");
+const inputForm = document.querySelector(".input-form");
+const logActivityButton = document.querySelector(".log-activity-button");
+const medButton = document.querySelector(".meditate");
+const minInput = document.getElementById("minute-input");
+const newActivity = document.querySelector(".new-activity");
+const newForm = document.querySelector(".new-form");
+const newFormButton = document.querySelector(".new-form-button")
+const noLogMessage = document.querySelector(".no-log-message");
+const secInput = document.getElementById("second-input");
+const studyButton = document.querySelector(".study");
+const submitButton = document.querySelector(".submit-button");
+const timerForm = document.querySelector(".timer-form");
+const timerStart = document.querySelector(".activity-start");
+const toAccomplish = document.querySelector(".to-accomplish");
+const btnContainer = document.querySelector("#button-layout")
 
-exeButton.addEventListener("click", function() {
-  changeButton(exeButton, "orange")
+
+btnContainer.addEventListener("click", function() {
+  const selectedColor = event.target.value;
+  const selectedBtn = event.target;
+    changeButton(selectedBtn,`${selectedColor}`)
 });
-medButton.addEventListener("click", function() {
-  changeButton(medButton, "purple")
-});
-studyButton.addEventListener("click", function() {
-  changeButton(studyButton, "green")
-});
+//
+// exeButton.addEventListener("click", function() {
+//   changeButton(exeButton, "orange")
+// });
+// medButton.addEventListener("click", function() {
+//   changeButton(medButton, "purple")
+// });
+// studyButton.addEventListener("click", function() {
+//   changeButton(studyButton, "green")
+// });
+//
+//
+
 logActivityButton.addEventListener("click", logActivity);
 newFormButton.addEventListener("click", createNewForm)
 submitButton.addEventListener("click", changeForm);
@@ -89,9 +100,9 @@ function changeForm() {
 }
 
 function startCountdown() {
-  var countByOne = setInterval(timer, 1000);
-  var seconds = secInput.value;
-  var minutes = minInput.value;
+  const countByOne = setInterval(timer, 1000);
+  const seconds = secInput.value;
+  const minutes = minInput.value;
 
   if (seconds < 10) {
   seconds = "0" + seconds;
@@ -130,18 +141,18 @@ function logActivity () {
     noLogMessage.classList.add("hide-item");
   }
   if(timerStart.classList.contains("green-border")){
-    var card = "Study";
-    var color = "green";
+    let card = "Study";
+    let color = "green";
     // cardColor.style.backgroundColor = "#B3FD78";
     // cardColor.classList.add("green-bar");
   }
   if(timerStart.classList.contains("purple-border")){
-      var card = "Meditate";
-      var color = "purple";
+      let card = "Meditate";
+      let color = "purple";
   }
   if(timerStart.classList.contains("orange-border")){
-      var card = "Exercise";
-      var color = "orange";
+      let card = "Exercise";
+      let color = "orange";
   }
   addCard(card,color);
   timerForm.classList.add("hide-item");
@@ -163,6 +174,7 @@ function addCard(card, color) {
 }
 
 function createNewForm(color) {
+  // add helper function
   event.preventDefault();
   completedActivity.classList.add("hide-item");
   exeButton.classList.remove("change-orange");
