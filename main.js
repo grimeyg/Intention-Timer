@@ -25,8 +25,8 @@ const btnContainer = document.querySelector("#button-layout")
 
 
 btnContainer.addEventListener("click", function() {
-  const selectedColor = event.target.value;
-  const selectedBtn = event.target;
+  let selectedColor = event.target.value;
+  let selectedBtn = event.target;
     changeButton(selectedBtn,`${selectedColor}`)
 });
 //
@@ -101,8 +101,8 @@ function changeForm() {
 
 function startCountdown() {
   const countByOne = setInterval(timer, 1000);
-  const seconds = secInput.value;
-  const minutes = minInput.value;
+  let seconds = secInput.value;
+  let minutes = minInput.value;
 
   if (seconds < 10) {
   seconds = "0" + seconds;
@@ -136,23 +136,22 @@ function startCountdown() {
 }
 
 function logActivity () {
+  let card, color;
   event.preventDefault();
   if (noLogMessage.classList.contains("no-log-message")) {
     noLogMessage.classList.add("hide-item");
   }
   if(timerStart.classList.contains("green-border")){
-    let card = "Study";
-    let color = "green";
-    // cardColor.style.backgroundColor = "#B3FD78";
-    // cardColor.classList.add("green-bar");
+    card = "Study";
+    color = "green";
   }
   if(timerStart.classList.contains("purple-border")){
-      let card = "Meditate";
+    card = "Meditate";
       let color = "purple";
   }
   if(timerStart.classList.contains("orange-border")){
-      let card = "Exercise";
-      let color = "orange";
+    card = "Exercise";
+    color = "orange";
   }
   addCard(card,color);
   timerForm.classList.add("hide-item");
